@@ -1,0 +1,71 @@
+{
+  "name": "InvestorDashboard",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@aws-amplify/auth": "^3.4.17",
+    "@aws-amplify/core": "^3.8.9",
+    "antd": "^4.11.2",
+    "axios": "^0.19.2",
+    "chart.js": "^2.9.3",
+    "cors": "^2.8.5",
+    "feather-icons-react": "^0.4.1",
+    "moment": "^2.27.0",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.4",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.4.1",
+    "xlsx": "^0.17.1"
+  },
+  "homepage": "https://dashboard.frxnl.com/",
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "set \"GENERATE_SOURCEMAP=false\" && react-app-rewired --max_old_space_size=15000 build",
+    "deploy": "npm run build && aws s3 sync build/ s3://investor-web-app --acl public-read && echo '🚀  Deployed!'",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
+    "lint": "eslint '**/*.js'",
+    "lint:fix": "eslint '**/*.js' --fix"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.13.0",
+    "customize-cra": "^0.9.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^4.0.5",
+    "esm": "^3.2.25",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "prettier": "^1.19.1",
+    "react-app-rewire-hot-loader": "^2.0.1",
+    "react-app-rewired": "^2.1.6",
+    "react-hot-loader": "^4.12.18",
+    "redux-devtools": "^3.5.0",
+    "webpack-bundle-analyzer": "^3.7.0",
+    "yarn": "^1.22.4"
+  }
+}
